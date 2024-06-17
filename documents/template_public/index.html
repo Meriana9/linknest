@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linknest - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-gray-900 text-white font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-gray-700">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a class="text-white font-bold text-xl" href="{{ url('/') }}">
+                Linknest
+            </a>
+            <div>
+                <a href="{{ route('logout') }}" class="text-gray-300 hover:text-white px-3 py-2">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto flex flex-wrap py-12">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-1/4 p-3">
+            <div class="bg-gray-700 rounded-lg shadow-lg p-4 mb-4">
+                <h2 class="font-bold text-lg mb-4">Categories</h2>
+                <ul class="list-reset">
+                    <!-- Example static categories, these would be dynamic in a real application -->
+                    <li><a class="text-gray-300 hover:text-white" href="#">Friends</a></li>
+                    <li><a class="text-gray-300 hover:text-white" href="#">Family</a></li>
+                    <li><a class="text-gray-300 hover:text-white" href="#">Colleagues</a></li>
+                </ul>
+            </div>
+            <div class="bg-gray-700 rounded-lg shadow-lg p-4">
+                <h2 class="font-bold text-lg mb-4">Tags</h2>
+                <div class="tag-cloud">
+                    <!-- Example static tags, these would be dynamic in a real application -->
+                    <a class="text-gray-300 hover:text-white text-sm" href="#">Close</a>
+                    <a class="text-gray-300 hover:text-white text-md" href="#">New</a>
+                    <a class="text-gray-300 hover:text-white text-lg" href="#">Work</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main section -->
+        <section class="w-full md:w-3/4 p-3">
+            <div class="mb-4">
+                <input class="w-full bg-gray-800 text-gray-300 rounded-full py-2 px-4" type="text" placeholder="Search Contacts...">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Example static contact cards, these would be dynamic in a real application -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg p-4">
+                    <h3 class="text-xl font-bold mb-2">John Doe</h3>
+                    <p class="text-gray-400 mb-2">john.doe@example.com</p>
+                    <p class="text-gray-400 mb-2">+1234567890</p>
+                    <p class="text-gray-400">123 Main St, Anytown, USA</p>
+                </div>
+                <!-- More contact cards as needed -->
+            </div>
+        </section>
+    </div>
+</body>
+</html>
